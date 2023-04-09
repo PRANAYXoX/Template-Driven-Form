@@ -25,6 +25,28 @@
       </div>
       <div class="row mt-2">
         <input
+          type="email"
+          pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$"
+          name="email"
+          placeholder="Enter email..."
+          class="form-control"
+          ngModel
+          #email="ngModel"
+          (change)="getVal(email)"
+          required
+          [title]="
+            email.touched && email.invalid
+              ? 'Field cant be empty'
+              : 'Enter your Email Address'
+          "
+          [ngClass]="{
+            'is-invalid': email.touched && email.invalid,
+            'is-valid': email.touched && email.valid
+          }"
+        />
+      </div>
+      <div class="row mt-2">
+        <input
           type="text"
           name="pass"
           placeholder="Enter Password"
