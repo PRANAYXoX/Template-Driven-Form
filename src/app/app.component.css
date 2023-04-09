@@ -1,0 +1,10 @@
+.align {
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  font-weight: 900;
+  font-size: 25px;
+  background-color: darkorange;
+}
