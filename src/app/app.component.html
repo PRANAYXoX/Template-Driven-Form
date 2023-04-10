@@ -26,7 +26,6 @@
       <div class="row mt-2">
         <input
           type="email"
-          pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$"
           name="email"
           placeholder="Enter email..."
           class="form-control"
@@ -114,7 +113,9 @@
         ></textarea>
       </div>
       <div class="row mt-4">
-        <button type="submit" class="btn btn-warning">SUBMIT</button>
+        <button type="submit" class="btn btn-warning" [disabled]="f.invalid">
+          SUBMIT
+        </button>
       </div>
     </div>
   </form>
