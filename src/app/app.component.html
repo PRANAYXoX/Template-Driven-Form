@@ -1,5 +1,5 @@
-<div class="container-fluid p-4">
-  <form #f="ngForm" (submit)="onSubmit(f)">
+<div class="container-fluid p-5">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
     <div class="container form-group">
       <div class="row header align d-flex">FORM</div>
       <div class="row mt-2">
@@ -96,7 +96,7 @@
         <textarea
           type="text"
           name="addr"
-          placeholder="Enter Password"
+          placeholder="Enter Address.."
           class="form-control"
           ngModel
           #addr="ngModel"
@@ -111,8 +111,6 @@
               ? 'Address is Invalid'
               : 'Enter the address'
           "
-          minlength="8"
-          maxlength="12"
         ></textarea>
       </div>
       <div class="row mt-4">

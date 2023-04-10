@@ -13,7 +13,7 @@ export class AppComponent {
   cPass: String = '';
   addr: String = '';
   onSubmit = (f: NgForm) => {
-    console.log('FORM OUTPUT:', f);
+    console.log('FORM OUTPUT:', f?.value);
   };
   getVal = (f: any) => {
     console.log('VAL::', f.name);
